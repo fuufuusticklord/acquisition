@@ -131,7 +131,7 @@ Causes Bleeding on Hit
 #% increased Life Leeched per second
 #% increased Damage
 #% increased Damage over Time
-Hits can't be evaded
+Hits can't be evaded,Your hits can't be evaded
 Area is inhabited by # additional Invasion Boss
 
 Prefixes Cannot Be Changed
