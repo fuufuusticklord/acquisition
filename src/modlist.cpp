@@ -19,6 +19,11 @@
 
 #include "modlist.h"
 
+// Added for file handling
+#include <iostream>
+#include <fstream>
+#include <sstream>
+
 #include <memory>
 #include <string>
 #include <unordered_map>
@@ -36,6 +41,101 @@ QStringList mod_string_list;
 // These are just summed, and the mod named as the first element of a vector is generated with value equaling the sum.
 // Both implicit and explicit fields are considered.
 // This is pretty much the same list as poe.trade uses
+
+// std::vector<std::vector<std::string>> simple_sum = {};
+// std::vector<std::string> simple_sum;
+
+/*
+
+int main() {
+    std::ifstream modfile;
+    std::string line;
+    modfile.open("_mods.txt");
+    if (modfile.is_open()) {
+        while (std::getline(modfile, line)) {
+            // std::cout << line << std::endl;
+            simple_sum.push_back(line.str());
+        }
+        modfile.close();
+}
+
+// std::vector<std::vector<std::string>> simple_sum;
+    while(std::getline(modsfile, line))    {
+        // std::string new_line;
+        // new_line = line + "\n";
+        // std::cout<<new_line;
+        if(line.size() > 0) {
+            simple_sum.push_back(line);
+        }
+    }
+
+
+
+
+}
+
+*/
+
+// const std::vector<std::string> simple_sum;
+
+// mod_string_list.push_back(list[0].c_str());
+
+/*
+
+std::vector<std::string> simple_sum;
+
+int main() {
+
+    // std::ifstream in(fileName.c_str());
+    // std::ifstream in("_mods.txt");
+    std::ifstream in("_mods.txt", std::ifstream::in);
+    std::string str;
+    while (std::getline(in, str)) {
+        if(str.size() > 0) {
+            simple_sum.push_back(str);
+        }
+    }
+    in.close();
+
+}
+
+*/
+
+// std::vector<std::string> simple_sum;
+
+// int main() {
+// std::ifstream in("_mods.txt");
+//     std::ifstream in("_mods.txt".c_str());
+
+ //   if(!in)    {
+ //       std::cerr << "Cannot open the File : "<<fileName<<std::endl;
+ //       return false;
+ //   }
+/*
+    std::string str;
+    // Read the next line from File untill it reaches the end.
+    while (std::getline(in, str))    {
+    // Line contains string of length > 0 then save it in vector
+        if(str.size() > 0)
+        simple_sum[0].push_back(str);
+    }
+    //Close The File
+    // in.close();
+//     return true;
+    // Get the contents of file in a vector
+*/
+
+// }
+
+
+// bool result = getFile("_mods.txt", simple_sum);
+// bool result = getFile("_mods.txt", simple_sum);
+
+/*
+Making a list of mods into a file, which can be imported to acquisition when launched. Eventually this could be done as dynamic solution.
+*/
+
+/*
 const std::vector<std::vector<std::string>> simple_sum = {
     { "#% increased Quantity of Items found" },
     { "#% increased Rarity of Items found" },
@@ -133,12 +233,66 @@ const std::vector<std::vector<std::string>> simple_sum = {
     { "* Leo's Level-28-capped-rolls mod", "Cannot roll Mods with Required Level above #" },
 };
 
+*/
+
 std::vector<std::unique_ptr<ModGenerator>> mod_generators;
+std::vector<std::vector<std::string>> simple_sum;
 
 void InitModlist() {
+
+
+    std::ifstream inFile("_mods.txt");
+    if (inFile.is_open())
+    {
+        std::string line;
+        while( std::getline(inFile,line) )
+        {
+            std::stringstream ss(line);
+
+//            std::string ID, fname, lname;
+//            std::getline(ss,ID,',');    std::cout<<"\""<<ID<<"\"";
+//            std::getline(ss,fname,','); std::cout<<", \""<<fname<<"\"";
+//            std::getline(ss,lname,','); std::cout<<", \""<<lname<<"\"";
+
+            std::vector<std::string> enrolled;
+            std::string course;
+            while( std::getline(ss,course,',') )
+            {
+                enrolled.push_back(course); // std::cout<<", \""<<course<<"\"";
+//                 enrolled.push_back(course); std::cout<<", \""<<course<<"\"";
+            }
+            simple_sum.push_back(enrolled);
+            // std::cout<<"\n";
+        }
+    }
+
+
+    /*
+    std::string modlist = "_mods.txt";
+    std::ifstream input(modlist.c_str());
+    std::string line;
+    while(std::getline(input, line)){
+        std::stringstream ss;
+        ss << line;
+        std::vector<std::string> row;
+        while (!ss.eof()) {
+            std::string tempStr;
+            ss >> tempStr;
+            row.push_back(tempStr);
+        }
+        simple_sum.push_back(row);
+    }
+
+
+
+*/
+
+
     for (auto &list : simple_sum) {
         mod_string_list.push_back(list[0].c_str());
+        // mod_string_list.push_back(list.c_str());
 
+        // mod_generators.push_back(std::make_unique<SumModGenerator>(list, list));
         mod_generators.push_back(std::make_unique<SumModGenerator>(list[0], list));
     }
 }
