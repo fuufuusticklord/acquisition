@@ -102,7 +102,7 @@ LoginDialog::LoginDialog(std::unique_ptr<Application> app) :
     ui->setupUi(this);
     ui->errorLabel->hide();
     ui->errorLabel->setStyleSheet("QLabel { color : red; }");
-    setWindowTitle(QString("Login [") + VERSION_NAME + "]");
+    setWindowTitle(QString("FFSL FORK Login [") + VERSION_NAME + "]");
 #if defined(Q_OS_LINUX)
     setWindowIcon(QIcon(":/icons/assets/icon.svg"));
 #endif

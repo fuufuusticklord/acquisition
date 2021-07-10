@@ -48,7 +48,7 @@ QStringList mod_string_list;
 Making a list of mods into a file, which can be imported to acquisition when launched. Eventually this could be done as dynamic solution.
 */
 
-/* Original
+/* Original values
 const std::vector<std::vector<std::string>> simple_sum = {
     { "#% increased Quantity of Items found" },
     { "#% increased Rarity of Items found" },
@@ -152,26 +152,16 @@ std::vector<std::unique_ptr<ModGenerator>> mod_generators;
 std::vector<std::vector<std::string>> simple_sum;
 
 void InitModlist() {
-
-
     std::ifstream inFile("_mods.txt");
     if (inFile.is_open())
     {
         std::string line;
         while( std::getline(inFile,line) )  {
             std::stringstream ss(line);
-
-//            std::string ID, fname, lname;
-//            std::getline(ss,ID,',');    std::cout<<"\""<<ID<<"\"";
-//            std::getline(ss,fname,','); std::cout<<", \""<<fname<<"\"";
-//            std::getline(ss,lname,','); std::cout<<", \""<<lname<<"\"";
-
             std::vector<std::string> enrolled;
             std::string course;
             while( std::getline(ss,course,',') )    {
-
-
-                // trim trailing spaces
+                // trim trailing spaces and end of line chars
                 size_t endpos = course.find_last_not_of(" \t\n\r");
                 size_t startpos = course.find_first_not_of(" \t\n\r");
                 if( std::string::npos != endpos )
@@ -183,18 +173,9 @@ void InitModlist() {
                     course.erase(std::remove(std::begin(course), std::end(course), ' '), std::end(course));
                 }
 
-                // course.erase(course.begin(), course.end(), ' '));
-                // course.erase(remove(course.begin(), course.end(), ' '), course.end());
-                // course.erase(remove(course.begin(), course.end(), ' '));
-                // std::replace( course.begin(), course.end(), ' ', ' ');
-                // ltrim(rtrim(course, " \t\n\r\f\v"), " \t\n\r\f\v");
-                // std::regex_replace(course, std::regex("\\s+$"), std::string(" "));
                 enrolled.push_back(course); // std::cout<<", \""<<course<<"\"";
-//                 enrolled.push_back(course); std::cout<<", \""<<course<<"\"";
-                // std::cout<<course;
             }
             simple_sum.push_back(enrolled);
-            // std::cout<<"\n";
         }
     }
 
