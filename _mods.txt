@@ -175,3 +175,6 @@ Minions Leech #% of Damage as Life
 #% chance to Avoid being Stunned
 #% chance to Avoid being Ignited
 #% chance to avoid Bleeding
+
+# Added Passive Skills is Flow of Life
+# Added Passive Skills is Circling Oblivion
