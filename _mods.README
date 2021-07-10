@@ -1,0 +1,26 @@
+What is _mods.txt?
+- I've changed the Acquisition functionality so, that all the "Add mod" filtering values are now retrieved from text file called _mods.txt.
+
+How to add more filter values to the _mods.txt file?
+- Filters are case sensitive, so make sure it's exactly like in the item description.
+- Remember to change the non-static numerical data to hash char: #
+- Each filter needs to be in separete line, but like in official Acquisition function, you can combine item properties, e.g.: (first value is the value in the dropdown list.
+
+#% increased Burning Damage,#% increased Fire Damage,#% increased Elemental Damage
+
+- As you can see, it's separated by comma char: ,
+- If you select this "#% increased Burning Damage" from dropdown, it will also list matching items for fire and elemental damage.
+- If you change the _mods.txt file, you need to reopen Acquisition to get updated values.
+- There's no validation what so ever.. so whatever you add there, will be listed in mods. -> Which means it can cause crashes/hacks/meltdowns/etc etc
+- Tested? nah, it works well enough.. until it breaks.
+
+Disclaimer: 
+- These changes were made, since I needed more filter values. Use at your own peril, especially since I have not distributed this publicly and this is very unofficial fork from latest Acquisition and there's no support what so ever. GG!
+Official: https://github.com/xyzz/acquisition
+
+----- 
+
+Changelog v0.1:
+- disabled auto update on startup (disabled, since I don't need to spam GGG APIs anymore than people already do. If you need to refresh your stashes, do it manually).
+- added new tab on login window for info about this modded version
+- main change was not to use static mod filters in the code, but a file that can be modified.

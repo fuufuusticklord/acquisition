@@ -1,0 +1,177 @@
+#% additional Block Chance while Dual Wielding
+#% additional Chance to Block with Shields
+#% additional Chance to Block with Staves
+#% additional Chance to Block Spells while Dual Wielding
+#% additional Chance to Block Spells with Shields
+#% additional Chance to Block Spells with Staves
+#% increased Area Damage
+#% increased Chaos Damage
+#% increased Cold Damage
+#% increased Fire Damage
+#% increased Lightning Damage
+#% increased Projectile Damage
+#% increased Projectile Speed
+#% increased Block and Stun Recovery
+#% increased Mana Regeneration Rate
+#% increased maximum Life
+#% increased maximum Mana
+#% increased Melee Physical Damage
+#% increased Melee Physical Damage while holding a Shield
+#% increased Physical Damage
+#% increased Physical Damage with Claws
+#% increased Physical Damage with Daggers
+#% increased Physical Damage with Wands
+#% increased Physical Damage with Swords
+#% increased Physical Damage with Axes
+#% increased Physical Damage with Maces
+#% increased Physical Damage with Staves
+#% increased Physical Damage with Bows
+#% increased Physical Damage with One Handed Melee Weapons
+#% increased Physical Damage with Two Handed Melee Weapons
+#% increased Rarity of Items found
+#% increased Quantity of Items found
+#% increased Spell Damage
+#% increased Spell Damage while Dual Wielding
+#% increased Spell Damage while holding a Shield
+#% increased Spell Damage wielding a Staff
+#% increased Totem Damage
+#% increased Totem Life
+#% reduced Mana Reserved
+#% of Block Chance applied to Spells
+#% increased Stun Duration on enemies
+#% Chance to Freeze
+#% Chance to Ignite
+#% Chance to Shock
+#% Chance to Block
+#% Chance to Block Spells
+#% Chance to Block during Flask effect
+#% additional Chance to Block Spells with Shields
++# to Accuracy Rating
+#% increased Accuracy Rating
++# to Dexterity,+# to Strength and Dexterity,+# to Dexterity and Intelligence,+# to all Attributes
++# to Strength,+# to Strength and Dexterity,+# to Strength and Intelligence,+# to all Attributes
++# to Intelligence,+# to Dexterity and Intelligence,+# to Strength and Intelligence,+# to all Attributes
++# to all Attributes
++# to maximum Energy Shield
++# to maximum Life
++# to maximum Mana
++#% Chance to Block
++#% Chance to Block while Dual Wielding
++#% Chance to Block with Shields
++#% Chance to Block with Staves
++#% to Cold Resistance,+#% to Fire and Cold Resistances,+#% to Cold and Lightning Resistances,+#% to all Elemental Resistances
++#% to Fire Resistance,+#% to Fire and Cold Resistances,+#% to Fire and Lightning Resistances,+#% to all Elemental Resistances
++#% to Lightning Resistance,+#% to Cold and Lightning Resistances,+#% to Fire and Lightning Resistances,+#% to all Elemental Resistances
++#% to all Elemental Resistances
++#% to Chaos Resistance
++# to Level of Socketed Aura Gems,+# to Level of Socketed Gems
++# to Level of Socketed Strength Gems,+# to Level of Socketed Gems
++# to Level of Socketed Bow Gems,+# to Level of Socketed Gems
++# to Level of Socketed Cold Gems,+# to Level of Socketed Gems
++# to Level of Socketed Elemental Gems,+# to Level of Socketed Gems
++# to Level of Socketed Fire Gems,+# to Level of Socketed Gems
++# to Level of Socketed Lightning Gems,+# to Level of Socketed Gems
++# to Level of Socketed Melee Gems,+# to Level of Socketed Gems
++# to Level of Socketed Minion Gems,+# to Level of Socketed Gems
++# to Level of Socketed Movement Gems,+# to Level of Socketed Gems
++# to Level of Socketed Spell Gems,+# to Level of Socketed Gems
++# to Level of Socketed Vaal Gems,+# to Level of Socketed Gems
+#% increased Fire Spell Damage,#% increased Fire Damage,#% increased Elemental Damage,#% increased Spell Damage
+#% increased Cold Spell Damage,#% increased Cold Damage,#% increased Elemental Damage,#% increased Spell Damage
+#% increased Lightning Spell Damage,#% increased Lightning Damage,#% increased Elemental Damage,#% increased Spell Damage
+#% increased Fire Damage with Weapons,#% increased Fire Damage,#% increased Elemental Damage with Weapons,#% increased Elemental Damage
+#% increased Cold Damage with Weapons,#% increased Cold Damage,#% increased Elemental Damage with Weapons,#% increased Elemental Damage
+#% increased Lightning Damage with Weapons,#% increased Lightning Damage,#% increased Elemental Damage with Weapons,#% increased Elemental Damage
+#% increased Elemental Damage with Weapons,#% increased Elemental Damage
+#% increased Burning Damage,#% increased Fire Damage,#% increased Elemental Damage
+#% increased Fire Area Damage,#% increased Fire Damage,#% increased Elemental Damage
+#% increased Critical Strike Chance for Spells,#% increased Global Critical Strike Chance
+#% increased Global Critical Strike Chance
+#% to Global Critical Strike Multiplier
+#% of Physical Attack Damage Leeched as Life
+#% of Physical Attack Damage Leeched as Mana
+Adds # Physical Damage to Attacks,Adds # to # Physical Damage,Adds # to # Physical Damage to Attacks
+Adds # Fire Damage to Attacks,Adds # to # Fire Damage,Adds # to # Fire Damage to Attacks
+Adds # Elemental Damage to Attacks,Adds # to # Fire Damage,Adds # to # Cold Damage,Adds # to # Lightning Damage,Adds # to # Fire Damage to Attacks,Adds # to # Cold Damage to Attacks,Adds # to # Lightning Damage to Attacks
+Adds # Damage to Attacks,Adds # to # Fire Damage,Adds # to # Cold Damage,Adds # to # Lightning Damage,Adds # to # Physical Damage,Adds # to # Chaos Damage,Adds # to # Fire Damage to Attacks,Adds # to # Cold Damage to Attacks,Adds # to # Lightning Damage to Attacks,Adds # to # Physical Damage to Attacks,Adds # to # Chaos Damage to Attacks
+Adds # Elemental Damage to Spells,Adds # to # Fire Damage to Spells,Adds # to # Cold Damage to Spells,Adds # to # Lightning Damage to Spells
+Adds # Damage to Spells,Adds # to # Fire Damage to Spells,Adds # to # Cold Damage to Spells,Adds # to # Lightning Damage to Spells,Adds # to # Chaos Damage to Spells
+#% increased Attack Speed
+#% increased Attack Speed with Claws
+#% increased Attack Speed with Daggers
+#% increased Attack Speed with Wands
+#% increased Attack Speed with Swords
+#% increased Attack Speed with Axes
+#% increased Attack Speed with Maces
+#% increased Attack Speed with Staves
+#% increased Attack Speed with Bows
+#% increased Attack Speed with One Handed Weapons
+#% increased Attack Speed with Two Handed Weapons
+#% increased Attack Speed while holding a Shield
+#% increased Attack and Cast Speed
+#% increased Cast Speed
+#% increased Cast Speed while Dual Wielding
+#% increased Cast Speed while holding a Shield
+#% increased Cast Speed while wielding a Staff
+#% increased Cast Speed with Cold Skills
+#% increased Cast Speed with Fire Skills
+#% increased Cast Speed with Lightning Skills
+Socketed Gems have #% more Attack and Cast Speed
+#% increased Movement Speed
+
++#% to Quality of Socketed Support Gems
+-# to Total Mana Cost of Skills
++# to Level of Socketed Support Gems,+# to Level of Socketed Gems
+Curse Enemies with Level # Elemental Weakness on Hit
+Curse Enemies with Level # Temporal Chains on Hit
+Curse Enemies with Level # Vulnerability on Hit
+Causes Bleeding on Hit
+#% Chance to poison on Hit
+#% Chance to Knock Enemies Back on Hit
+#% increased Life Leeched per second
+#% increased Damage
+#% increased Damage over Time
+Hits can't be evaded
+Area is inhabited by # additional Invasion Boss
+
+Prefixes Cannot Be Changed
+Can have multiple Crafted Mods
+Cannot roll Attack Mods
+Suffixes Cannot Be Changed
+Cannot roll Mods with Required Level above #
+Cannot roll Caster Mods
+
+#% increased Physical Damage taken
+
+Minions have #% increased Attack Speed
+Minions have #% increased Cast Speed
+#% increased Cast Speed if a Minion has been Killed Recently
+Minions have 8% increased Attack and Cast Speed if you or your Minions have Killed Recently
+# Energy Shield Regenerated per second
+Minions deal # to # additional Chaos Damage
+Minions deal # to # additional Lightning Damage
+Minions deal # to # additional Physical Damage
+Minions deal # to # additional Fire Damage
++#% to Critical Strike Multiplier with One Handed Melee Weapons
+#% increased Cast Speed with Fire Skills
+Minions Regenerate #% Life per second
+#% additional Physical Damage Reduction if you weren't Damaged by a Hit Recently
+Minions Regenerate # Life per second
+#% chance to Dodge Attacks and Spells if you've been Hit Recently
+Minions have 6% increased Movement Speed
+Minions have #% chance to Blind on Hit with Attacks
+#% additional Physical Damage Reduction against Abyssal Monsters
+Minions have +#% to all Elemental Resistances
+# Mana Regenerated per second
+Minions have #% chance to Taunt on Hit with Attacks
+#% increased Armour if you haven't Killed Recently
+#% increased Movement Speed if you haven't taken Damage Recently
+#% chance to gain Phasing for # seconds on Kill
+Adds # to # Physical Damage to Spells while wielding a Two Handed Weapon
+#% chance to Blind Enemies on Hit with Attacks
+Adds # to # Physical Damage to Sword Attacks
+Gain #% of Physical Damage as Extra Fire Damage if you've dealt a Critical Strike Recently
+Minions Leech #% of Damage as Life
+#% chance to Avoid being Stunned
+#% chance to Avoid being Ignited
+#% chance to avoid Bleeding
