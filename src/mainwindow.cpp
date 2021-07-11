@@ -609,7 +609,7 @@ void MainWindow::InitializeSearchForm() {
         std::make_unique<UnidentifiedFilter>(misc_flags2_layout, "", "Unidentified"),
         std::make_unique<ShaperFilter>(misc_flags2_layout, "", "Shaper"),
         std::make_unique<ElderFilter>(misc_flags2_layout, "", "Elder"),
-        // under work
+        // Added other influences
         std::make_unique<CrusaderFilter>(misc_flags2_layout, "", "Crusader"),
         std::make_unique<RedeemerFilter>(misc_flags2_layout, "", "Redeemer"),
         std::make_unique<HunterFilter>(misc_flags2_layout, "", "Hunter"),

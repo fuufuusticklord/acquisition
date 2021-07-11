@@ -152,64 +152,6 @@ Item::Item(const rapidjson::Value &json) :
             baseType_ = BASE_WARLORD;
     }
 
-
-
-//     rapidjson::Document document;
-//     using namespace rapidjson;
-
-//     if (json.HasMember("influences") && json["influences"].IsObject() && json["influences"].HasMember("hunter"))  {
-//        if (json.HasMember("influences") && json["influences"].IsObject())  {
-        // QLOG_WARN() << "Influence found on: " << PrettyName().c_str();
-
-//        rapidjson::StringBuffer sb;
-//        rapidjson::Writer<rapidjson::StringBuffer> writer( sb );
-        //json["influences"].Accept( writer );
-
-//        QLOG_WARN() << sb.GetString();
-
-        // QLOG_WARN() << json["influences"].Parse<0>(res.c_str());
-
-//        rapidjson::Document doc;
-//         doc.Parse < rapidjson::kParseStopWhenDoneFlag, rapidjson::UTF8<> >(json["influences"].c_str(), json["influences"].length());
-        // std::cout << doc.IsObject() << std::endl;
-
-       /*
-
-
- WARN 2021-07-11T13:59:48.592 {"warlord":true}
- WARN 2021-07-11T13:59:48.722 {"shaper":true}
- WARN 2021-07-11T13:59:49.059 {"hunter":true}
- WARN 2021-07-11T13:59:49.175 {"hunter":true}
-
-         rapidjson::UTF8<> >(jsonContent.c_str(), jsonContent.length());
-
-        for (auto &inf : json["influences"]) {
-           // if (inf.IsObject() && inf.HasMember("warlord_item")) {
-                    // && req["name"].IsString() &&
-                    QLOG_WARN() << PrettyName().c_str() << " INFLUENCE TEST!";
-            // }
-
-        }
-*/
-
-                    /*
-                    req.HasMember("values") && req["values"].IsArray() && req["values"].Size() >= 1 &&
-                    req["values"][0].IsArray() && req["values"][0].Size() >= 2 &&
-                    req["values"][0][0].IsString() && req["values"][0][1].IsInt()) {
-                    QLOG_WARN() << PrettyName().c_str() << " INFLUENCE TEST!";
-                    }
-
-                            */
-          // QLOG_WARN() << PrettyName().c_str() << " INFLUENCE TEST!" << json["influences"].Size();
-        // parse_obj = QJsonDocument::fromJson(json["influences"]);
-//        console.debug(JSON.stringify(json["influences"]));
-        // QLOG_WARN() << json["influences"];
-//        Document document;
-//        document.Parse(json["influences"]);
-
-//    }
-
-
     if (json.HasMember("w") && json["w"].IsInt())
         w_ = json["w"].GetInt();
     if (json.HasMember("h") && json["h"].IsInt())
