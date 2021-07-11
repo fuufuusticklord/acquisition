@@ -17,6 +17,7 @@
 #% increased maximum Mana
 #% increased Melee Physical Damage
 #% increased Melee Physical Damage while holding a Shield
+#% increased Global Physical Damage
 #% increased Physical Damage
 #% increased Physical Damage with Claws
 #% increased Physical Damage with Daggers
@@ -126,8 +127,8 @@ Curse Enemies with Level # Elemental Weakness on Hit
 Curse Enemies with Level # Temporal Chains on Hit
 Curse Enemies with Level # Vulnerability on Hit
 Causes Bleeding on Hit
-#% Chance to poison on Hit
-#% Chance to Knock Enemies Back on Hit
+#% chance to Poison on hit
+#% chance to Knock Enemies Back on hit
 #% increased Life Leeched per second
 #% increased Damage
 #% increased Damage over Time
@@ -176,5 +177,6 @@ Minions Leech #% of Damage as Life
 #% chance to Avoid being Ignited
 #% chance to avoid Bleeding
 
-# Added Passive Skills is Flow of Life
-# Added Passive Skills is Circling Oblivion
+Adds # Passive Skills
+1 Added Passive Skill is Flow of Life
+1 Added Passive Skill is Circling Oblivion
