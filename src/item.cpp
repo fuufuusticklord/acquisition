@@ -117,10 +117,18 @@ Item::Item(const rapidjson::Value &json) :
 
     if (json.HasMember("shaper") && json["shaper"].IsBool() && json["shaper"].GetBool())
         baseType_ = BASE_SHAPER;
+    if (json.HasMember("crusader") && json["crusader"].IsBool() && json["crusader"].GetBool())
+        baseType_ = BASE_CRUSADER;
+    if (json.HasMember("redeemer") && json["redeemer"].IsBool() && json["redeemer"].GetBool())
+        baseType_ = BASE_REDEEMER;
+    if (json.HasMember("hunter") && json["hunter"].IsBool() && json["hunter"].GetBool())
+        baseType_ = BASE_HUNTER;
+    if (json.HasMember("warlord") && json["warlord"].IsBool() && json["warlord"].GetBool())
+        baseType_ = BASE_WARLORD;
     if (json.HasMember("elder") && json["elder"].IsBool() && json["elder"].GetBool()) {
-        if (baseType_ != BASE_NORMAL) {
-            QLOG_WARN() << PrettyName().c_str() << " has multiple conflicting base type attributes.";
-        }
+//        if (baseType_ != BASE_NORMAL) {
+//            QLOG_WARN() << PrettyName().c_str() << " has multiple conflicting base type attributes.";
+//        }
         baseType_ = BASE_ELDER;
     }
 

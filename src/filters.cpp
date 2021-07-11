@@ -538,10 +538,40 @@ bool EnchantedFilter::Matches(const std::shared_ptr<Item> &item, FilterData *dat
     return item->enchanted();
 }
 
-bool WarFilter::Matches(const std::shared_ptr<Item> &item, FilterData *data) {
+bool ShaperFilter::Matches(const std::shared_ptr<Item> &item, FilterData *data) {
     if (!data->checked)
         return true;
-    return item->shaper() || item->elder();
+    return item->shaper();
+}
+
+bool ElderFilter::Matches(const std::shared_ptr<Item> &item, FilterData *data) {
+    if (!data->checked)
+        return true;
+    return item->elder();
+}
+
+bool CrusaderFilter::Matches(const std::shared_ptr<Item> &item, FilterData *data) {
+    if (!data->checked)
+        return true;
+    return item->crusader();
+}
+
+bool RedeemerFilter::Matches(const std::shared_ptr<Item> &item, FilterData *data) {
+    if (!data->checked)
+        return true;
+    return item->redeemer();
+}
+
+bool HunterFilter::Matches(const std::shared_ptr<Item> &item, FilterData *data) {
+    if (!data->checked)
+        return true;
+    return item->hunter();
+}
+
+bool WarlordFilter::Matches(const std::shared_ptr<Item> &item, FilterData *data) {
+    if (!data->checked)
+        return true;
+    return item->warlord();
 }
 
 double ItemlevelFilter::GetValue(const std::shared_ptr<Item> &item) {

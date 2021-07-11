@@ -67,7 +67,11 @@ public:
     enum BASE_TYPES {
         BASE_NORMAL,
         BASE_SHAPER,
-        BASE_ELDER
+        BASE_ELDER,
+        BASE_CRUSADER,
+        BASE_REDEEMER,
+        BASE_HUNTER,
+        BASE_WARLORD
     };
 
     explicit Item(const rapidjson::Value &json);
@@ -82,6 +86,10 @@ public:
     BASE_TYPES baseType() const { return baseType_; }
     bool shaper() const { return baseType_ == BASE_SHAPER; }
     bool elder() const { return baseType_ == BASE_ELDER; }
+    bool crusader() const { return baseType_ == BASE_CRUSADER; }
+    bool redeemer() const { return baseType_ == BASE_REDEEMER; }
+    bool hunter() const { return baseType_ == BASE_HUNTER; }
+    bool warlord() const { return baseType_ == BASE_WARLORD; }
     int w() const { return w_; }
     int h() const { return h_; }
     int frameType() const { return frameType_; }

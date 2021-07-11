@@ -294,9 +294,49 @@ public:
     bool Matches(const std::shared_ptr<Item> &item, FilterData *data);
 };
 
-class WarFilter : public BooleanFilter {
+class ShaperFilter : public BooleanFilter {
 public:
-    WarFilter(QLayout *parent, std::string property, std::string caption):
+    ShaperFilter(QLayout *parent, std::string property, std::string caption):
+        BooleanFilter(parent, property, caption) {}
+    using BooleanFilter::BooleanFilter;
+    bool Matches(const std::shared_ptr<Item> &item, FilterData *data);
+};
+
+class ElderFilter : public BooleanFilter {
+public:
+    ElderFilter(QLayout *parent, std::string property, std::string caption):
+        BooleanFilter(parent, property, caption) {}
+    using BooleanFilter::BooleanFilter;
+    bool Matches(const std::shared_ptr<Item> &item, FilterData *data);
+};
+
+class CrusaderFilter : public BooleanFilter {
+public:
+    CrusaderFilter(QLayout *parent, std::string property, std::string caption):
+        BooleanFilter(parent, property, caption) {}
+    using BooleanFilter::BooleanFilter;
+    bool Matches(const std::shared_ptr<Item> &item, FilterData *data);
+};
+
+class RedeemerFilter : public BooleanFilter {
+public:
+    RedeemerFilter(QLayout *parent, std::string property, std::string caption):
+        BooleanFilter(parent, property, caption) {}
+    using BooleanFilter::BooleanFilter;
+    bool Matches(const std::shared_ptr<Item> &item, FilterData *data);
+};
+
+class HunterFilter : public BooleanFilter {
+public:
+    HunterFilter(QLayout *parent, std::string property, std::string caption):
+        BooleanFilter(parent, property, caption) {}
+    using BooleanFilter::BooleanFilter;
+    bool Matches(const std::shared_ptr<Item> &item, FilterData *data);
+};
+
+class WarlordFilter : public BooleanFilter {
+public:
+    WarlordFilter(QLayout *parent, std::string property, std::string caption):
         BooleanFilter(parent, property, caption) {}
     using BooleanFilter::BooleanFilter;
     bool Matches(const std::shared_ptr<Item> &item, FilterData *data);

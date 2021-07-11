@@ -138,6 +138,14 @@ QVariant WarColumn::value(const Item &item) const {
         return "S";
     if (item.elder())
         return "E";
+    if (item.crusader())
+        return "C";
+    if (item.redeemer())
+        return "R";
+    if (item.hunter())
+        return "H";
+    if (item.warlord())
+        return "W";
     return QVariant();
 }
 
