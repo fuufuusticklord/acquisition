@@ -25,6 +25,7 @@
 #include <boost/algorithm/string.hpp>
 #include <regex>
 #include "rapidjson/document.h"
+#include <rapidjson/writer.h>
 
 #include "QsLog.h"
 #include "modlist.h"
@@ -115,6 +116,9 @@ Item::Item(const rapidjson::Value &json) :
     if (json.HasMember("enchantMods") && json["enchantMods"].IsArray() && !json["enchantMods"].Empty())
         enchanted_ = true;
 
+
+    // Original clauses with temp addon tests
+/*
     if (json.HasMember("shaper") && json["shaper"].IsBool() && json["shaper"].GetBool())
         baseType_ = BASE_SHAPER;
     if (json.HasMember("crusader") && json["crusader"].IsBool() && json["crusader"].GetBool())
@@ -126,11 +130,85 @@ Item::Item(const rapidjson::Value &json) :
     if (json.HasMember("warlord") && json["warlord"].IsBool() && json["warlord"].GetBool())
         baseType_ = BASE_WARLORD;
     if (json.HasMember("elder") && json["elder"].IsBool() && json["elder"].GetBool()) {
-//        if (baseType_ != BASE_NORMAL) {
-//            QLOG_WARN() << PrettyName().c_str() << " has multiple conflicting base type attributes.";
-//        }
+        if (baseType_ != BASE_NORMAL) {
+            QLOG_WARN() << PrettyName().c_str() << " has multiple conflicting base type attributes.";
+        }
         baseType_ = BASE_ELDER;
     }
+*/
+
+    if (json.HasMember("influences") && json["influences"].IsObject()) {
+        if (json["influences"].HasMember("shaper"))
+            baseType_ = BASE_SHAPER;
+        if (json["influences"].HasMember("elder"))
+            baseType_ = BASE_ELDER;
+        if (json["influences"].HasMember("crusader"))
+            baseType_ = BASE_CRUSADER;
+        if (json["influences"].HasMember("redeemer"))
+            baseType_ = BASE_REDEEMER;
+        if (json["influences"].HasMember("hunter"))
+            baseType_ = BASE_HUNTER;
+        if (json["influences"].HasMember("warlord"))
+            baseType_ = BASE_WARLORD;
+    }
+
+
+
+//     rapidjson::Document document;
+//     using namespace rapidjson;
+
+//     if (json.HasMember("influences") && json["influences"].IsObject() && json["influences"].HasMember("hunter"))  {
+//        if (json.HasMember("influences") && json["influences"].IsObject())  {
+        // QLOG_WARN() << "Influence found on: " << PrettyName().c_str();
+
+//        rapidjson::StringBuffer sb;
+//        rapidjson::Writer<rapidjson::StringBuffer> writer( sb );
+        //json["influences"].Accept( writer );
+
+//        QLOG_WARN() << sb.GetString();
+
+        // QLOG_WARN() << json["influences"].Parse<0>(res.c_str());
+
+//        rapidjson::Document doc;
+//         doc.Parse < rapidjson::kParseStopWhenDoneFlag, rapidjson::UTF8<> >(json["influences"].c_str(), json["influences"].length());
+        // std::cout << doc.IsObject() << std::endl;
+
+       /*
+
+
+ WARN 2021-07-11T13:59:48.592 {"warlord":true}
+ WARN 2021-07-11T13:59:48.722 {"shaper":true}
+ WARN 2021-07-11T13:59:49.059 {"hunter":true}
+ WARN 2021-07-11T13:59:49.175 {"hunter":true}
+
+         rapidjson::UTF8<> >(jsonContent.c_str(), jsonContent.length());
+
+        for (auto &inf : json["influences"]) {
+           // if (inf.IsObject() && inf.HasMember("warlord_item")) {
+                    // && req["name"].IsString() &&
+                    QLOG_WARN() << PrettyName().c_str() << " INFLUENCE TEST!";
+            // }
+
+        }
+*/
+
+                    /*
+                    req.HasMember("values") && req["values"].IsArray() && req["values"].Size() >= 1 &&
+                    req["values"][0].IsArray() && req["values"][0].Size() >= 2 &&
+                    req["values"][0][0].IsString() && req["values"][0][1].IsInt()) {
+                    QLOG_WARN() << PrettyName().c_str() << " INFLUENCE TEST!";
+                    }
+
+                            */
+          // QLOG_WARN() << PrettyName().c_str() << " INFLUENCE TEST!" << json["influences"].Size();
+        // parse_obj = QJsonDocument::fromJson(json["influences"]);
+//        console.debug(JSON.stringify(json["influences"]));
+        // QLOG_WARN() << json["influences"];
+//        Document document;
+//        document.Parse(json["influences"]);
+
+//    }
+
 
     if (json.HasMember("w") && json["w"].IsInt())
         w_ = json["w"].GetInt();

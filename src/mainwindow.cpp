@@ -610,10 +610,10 @@ void MainWindow::InitializeSearchForm() {
         std::make_unique<ShaperFilter>(misc_flags2_layout, "", "Shaper"),
         std::make_unique<ElderFilter>(misc_flags2_layout, "", "Elder"),
         // under work
-//        std::make_unique<CrusaderFilter>(misc_flags2_layout, "", "Crusader"),
-//        std::make_unique<RedeemerFilter>(misc_flags2_layout, "", "Redeemer"),
-//        std::make_unique<HunterFilter>(misc_flags2_layout, "", "Hunter"),
-//        std::make_unique<WarlordFilter>(misc_flags2_layout, "", "Warlord"),
+        std::make_unique<CrusaderFilter>(misc_flags2_layout, "", "Crusader"),
+        std::make_unique<RedeemerFilter>(misc_flags2_layout, "", "Redeemer"),
+        std::make_unique<HunterFilter>(misc_flags2_layout, "", "Hunter"),
+        std::make_unique<WarlordFilter>(misc_flags2_layout, "", "Warlord"),
         std::make_unique<CraftedFilter>(misc_flags2_layout, "", "Master-crafted"),
         std::make_unique<EnchantedFilter>(misc_flags2_layout, "", "Enchanted"),
         std::make_unique<ModsFilter>(mods_layout)
