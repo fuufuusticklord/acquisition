@@ -158,24 +158,24 @@ void InitModlist() {
         std::string line;
         while( std::getline(inFile,line) )  {
             std::stringstream ss(line);
-            std::vector<std::string> enrolled;
-            std::string course;
-            while( std::getline(ss,course,',') )    {
+            std::vector<std::string> elModF;
+            std::string elMod;
+            while( std::getline(ss,elMod,',') )    {
                 // trim trailing spaces and end of line chars
-                size_t endpos = course.find_last_not_of(" \t\n\r");
-                size_t startpos = course.find_first_not_of(" \t\n\r");
+                size_t endpos = elMod.find_last_not_of(" \t\n\r");
+                size_t startpos = elMod.find_first_not_of(" \t\n\r");
                 if( std::string::npos != endpos )
                 {
-                    course = course.substr( 0, endpos+1 );
-                    course = course.substr( startpos );
+                    elMod = elMod.substr( 0, endpos+1 );
+                    elMod = elMod.substr( startpos );
                 }
                 else {
-                    course.erase(std::remove(std::begin(course), std::end(course), ' '), std::end(course));
+                    elMod.erase(std::remove(std::begin(elMod), std::end(elMod), ' '), std::end(elMod));
                 }
 
-                enrolled.push_back(course); // std::cout<<", \""<<course<<"\"";
+                elModF.push_back(elMod); // std::cout<<", \""<<elMod<<"\"";
             }
-            simple_sum.push_back(enrolled);
+            simple_sum.push_back(elModF);
         }
     }
 
